@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main">
+
+      <div class="title">
+        <h2>HTML Table</h2>
+        <button class="addButton">+ Add</button>
+      </div>
+
+      <table class="content-table">
+        <thead>
+          <th>Full Name</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th></th>
+        </thead>
+        <tbody class="content">
+        </tbody>
+      </table>
+
+      <div class="newInfo hidden">
+        <h3>Write new information</h3>
+        <form id="form">
+          <label>
+            <input type="text" class="operation__name" placeholder="full_name" />
+          </label>
+          <label>
+            <input
+              type="text"
+              class="operation__address"
+              placeholder="address"
+            />
+          </label>
+          <label>
+            <input
+              type="text"
+              class="operation__phone"
+              placeholder="phone"
+              maxlength="13"
+            />
+          </label>
+          <button type="submit">Добавить операцию</button>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

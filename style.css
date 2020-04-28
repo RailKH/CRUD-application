@@ -1,0 +1,150 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.main {
+  max-width: 900px;
+  padding: 10px;
+}
+
+.main button {
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.main button:hover {
+  background-color: white;
+  color: #009879;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  width: 100%;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.content-table thead {
+  background-color: #009879;
+  text-align: left;
+  font-weight: bold;
+  color: #fff;
+}
+
+.content-table th {
+  padding: 12px 15px;
+}
+
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tr:last-child {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody .action {
+  width: 150px;
+}
+
+tbody tr:hover {
+  color: #009879;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title button {
+  margin-left: 15px;
+}
+
+.newInfo {
+  margin-bottom: 20px;
+}
+
+.newInfo form {
+  padding: 20px 0;
+}
+
+.newInfo form input {
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #bebebe;
+}
+
+.newInfo form input:focus {
+  color: #009879;
+  font-weight: bold;
+  border: 1px solid #009879;
+  outline: 0;
+}
+
+@media (max-width: 767px) {
+  .content-table thead {
+    display: none;
+  }
+  .content-table tbody tr {
+    padding: 10px 0;
+  }
+  .content-table tbody td {
+    text-align: right;
+    position: relative;
+  }
+  .content-table tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bold;
+  }
+  .content-table tbody,
+  .content-table tr,
+  .content-table td,
+  .content-table tbody .action {
+    display: block;
+    width: 100%;
+  }
+  .newInfo form {
+    position: relative;
+  }
+  .newInfo form input {
+    display: block;
+    width: 100%;
+  }
+  .newInfo form button {
+    position: absolute;
+    right: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
