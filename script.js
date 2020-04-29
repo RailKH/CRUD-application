@@ -12,6 +12,7 @@ const content = document.querySelector(".content"),
 let idTable = 0;
 let info = JSON.parse(localStorage.getItem("crud")) || [];
 
+// Построение ячеек в таблице
 const renderOperation = (operation, ind) => {
   const listItem = document.createElement("tr");
 
@@ -24,6 +25,7 @@ const renderOperation = (operation, ind) => {
   content.append(listItem);
 };
 
+// Функция добавление данных в таблицу
 const addOperation = (event) => {
   event.preventDefault();
 
@@ -60,6 +62,7 @@ const addOperation = (event) => {
   }
 };
 
+//Функция обработки инфомормации по нажатию на кнопки Edit и Delete
 const changeOperation = (e) => {
   if (e.target.classList.contains("info_delete")) {
     info.splice(e.target.dataset.id, 1);
@@ -70,6 +73,7 @@ const changeOperation = (e) => {
   }
 };
 
+//Функция корректировки данных в таблице
 const editOperation = (index) => {
   changeValue("edit");
   const arr = Object.values(info[index]);
@@ -79,6 +83,7 @@ const editOperation = (index) => {
   idTable = index;
 };
 
+// Функция смены textContent в форме для заполнения данных
 const changeValue = (value) => {
   newInfo.classList.remove("hidden");
   newInfoTitle.textContent =
@@ -88,6 +93,7 @@ const changeValue = (value) => {
   form.dataset.change = value;
 };
 
+// Функция открытия формы при нажатии кнопки Add
 const openWrapper = () => {
   changeValue("add");
   newInfoInput.forEach((item) => {
@@ -99,6 +105,7 @@ form.addEventListener("submit", addOperation);
 content.addEventListener("click", changeOperation);
 addButton.addEventListener("click", openWrapper);
 
+// Обновление таблицы
 const init = () => {
   content.textContent = "";
   info.forEach((item, ind) => renderOperation(item, ind));
